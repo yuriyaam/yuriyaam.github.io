@@ -123,32 +123,32 @@ content:
           I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
 
   - title: Skill
-      layout: list
-      content:
-        - layout: left
-          title: Backend
-          description: |
-            - Java, C, Python
-            - Spring Boot, Spring Batch, Spring Security, Spring Framework
-            - MyBatis, JPA
-            - Oracle Tuxedo, System V IPC, TCP/IP Socket
-            - Gradle, Maven
-            - IntelliJ, Visual Studio Code
-  
-        - layout: left
-          title: DevOps
-          description: |
-            - Oracle, MySQL, MongoDB, Redis
-            - Jenkins, GitLab, Jira, Makefile
-            - Azure Cloud, Azure Blob Storage
-            - Linux, Windows Server
-  
-        - layout: left
-          title: Frontend
-          description: |
-            - HTML, CSS, JavaScript
-            - JSP, Thymeleaf, WebSquare
-            - Vue.js, Nuxt
+    layout: list
+    content:
+      - layout: left
+        title: Backend
+        description: |
+          - Java, C, Python
+          - Spring Boot, Spring Batch, Spring Security, Spring Framework
+          - MyBatis, JPA
+          - Oracle Tuxedo, System V IPC, TCP/IP Socket
+          - Gradle, Maven
+          - IntelliJ, Visual Studio Code
+
+      - layout: left
+        title: DevOps
+        description: |
+          - Oracle, MySQL, MongoDB, Redis
+          - Jenkins, GitLab, Jira, Makefile
+          - Azure Cloud, Azure Blob Storage
+          - Linux, Windows Server
+
+      - layout: left
+        title: Frontend
+        description: |
+          - HTML, CSS, JavaScript
+          - JSP, Thymeleaf, WebSquare
+          - Vue.js, Nuxt
   
   - title: A Little More About Me
     layout: text
