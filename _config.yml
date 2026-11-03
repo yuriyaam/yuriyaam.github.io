@@ -85,27 +85,28 @@ content:
         description: | # this will include new lines to allow paragraphs
           - 키움증권 주식담보대출 위험관리 시스템(RMS) 메인 개발 및 단독 운영, 재직 중 서비스 중단 0건
           - NXT 대체거래소 도입 및 KRX 애프터마켓 대응 (단독 수행)
+          - 키움증권 IDC 온프레미스 폐쇄망 환경에서 Linux 기반 이중화(Active-Standby) 시스템 운영 및 페일오버 대응
           - 실시간 수신 크래시 루프, 신주인수권 마이너스 잔고, SOR 정정 미체결금액 오류 등 장애 근본 원인 해결
           - AI 시그널프로 결제·환불·매출·정산 어드민 단독 구축, 출시 이후 정산 오차 0건
           - 상품 조회 공통 모듈 설계로 신규 상품을 DB 등록만으로 반영하는 구조 마련
           - 푸시 대량 발송 시 DB 커넥션 풀 고갈 트러블슈팅
-    content:
-    - layout: left
-      title: 엠텔레텍
-      link: mteletec.com
-      # link_text: boringcompany.com
-      sub_title: 대리 · 통신사 시스템 백엔드 개발
-      caption: 2021.01 - 2024.11
-      quote: >
-        LG유플러스 협력 SI 기업, 통신사 기간계 CRM과 단말 재고 관리, 가입 DX 시스템 개발
-      description: | # this will include new lines to allow paragraphs
-        - LG유플러스 유큐브 MSA 차세대 CRM 현행화: 고객 생애주기 관리 일배치 약 40개 전면 수정
-        - 약 30만 건 처리 배치 쿼리 튜닝으로 수행 시간 40분 → 5분 단축 (DBA 협업)
-        - ETL에서 Kafka로 전환된 연계 데이터 정합성 검증
-        - 채널 거부 테이블 현재 상태와 이력 분리 설계 및 화면 재개발
-        - 리치디바인 CRM 웹사이트 핵심 메뉴 설계·개발, 고객 조회 2~3분 → 5초 이내 개선
-        - 단말 재고 관리 시스템 프레임워크 마이그레이션 및 기능 개선
-        - 팀 내 <mark>우수사원 2회 선정</mark>(2022, 2023), 신입 사원 멘토
+          
+      - layout: left
+        title: 엠텔레텍
+        link: mteletec.com
+        # link_text: boringcompany.com
+        sub_title: 대리 · 통신사 시스템 백엔드 개발
+        caption: 2021.01 - 2024.11
+        quote: >
+          LG유플러스 협력 SI 기업, 통신사 기간계 CRM과 단말 재고 관리, 가입 DX 시스템 개발
+        description: | # this will include new lines to allow paragraphs
+          - LG유플러스 유큐브 MSA 차세대 CRM 현행화: 고객 생애주기 관리 일배치 약 40개 전면 수정
+          - 약 30만 건 처리 배치 쿼리 튜닝으로 수행 시간 40분 → 5분 단축 (DBA 협업)
+          - ETL에서 Kafka로 전환된 연계 데이터 정합성 검증
+          - 채널 거부 테이블 현재 상태와 이력 분리 설계 및 화면 재개발
+          - 리치디바인 CRM 웹사이트 핵심 메뉴 설계·개발, 고객 조회 2~3분 → 5초 이내 개선
+          - 단말 재고 관리 시스템 프레임워크 마이그레이션 및 기능 개선
+          - 팀 내 <mark>우수사원 2회 선정</mark>(2022, 2023), 신입 사원 멘토
 
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
@@ -121,6 +122,34 @@ content:
 
           I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
 
+  - title: Skill
+      layout: list
+      content:
+        - layout: left
+          title: Backend
+          description: |
+            - Java, C, Python
+            - Spring Boot, Spring Batch, Spring Security, Spring Framework
+            - MyBatis, JPA
+            - Oracle Tuxedo, System V IPC, TCP/IP Socket
+            - Gradle, Maven
+            - IntelliJ, Visual Studio Code
+  
+        - layout: left
+          title: DevOps
+          description: |
+            - Oracle, MySQL, MongoDB, Redis
+            - Jenkins, GitLab, Jira, Makefile
+            - Azure Cloud, Azure Blob Storage
+            - Linux, Windows Server
+  
+        - layout: left
+          title: Frontend
+          description: |
+            - HTML, CSS, JavaScript
+            - JSP, Thymeleaf, WebSquare
+            - Vue.js, Nuxt
+  
   - title: A Little More About Me
     layout: text
     content: | # this will include new lines to allow paragraphs
