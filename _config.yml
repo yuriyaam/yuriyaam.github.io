@@ -48,8 +48,10 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Java와 C를 기반으로 금융 시스템을 개발하고 운영해 온 6년 차 백엔드 개발자입니다.
-  실시간 데이터 처리, 리스크 관리, 결제 및 정산 시스템을 개발해 왔으며, <mark>데이터의 정확성과 시스템 안정성</mark>을 중요하게 생각합니다.
+  Java와 C 기반의 6년 차 백엔드 개발자로, 금융·통신 분야의 시스템 개발 및 운영을 담당해 왔습니다.
+  약 5천 계좌 규모의 주식담보대출 위험관리 시스템(RMS) <mark>메인 개발자</mark>로서 실시간 거래 처리와 금융기관 연계 시스템을 운영하며, 재직 기간 <mark>전체 서비스 중단 0건</mark>을 유지했습니다.
+  키움증권, 다우기술, 16개 여신사 및 수탁사 등 <mark>다양한 대외 기관과 협업</mark>하며 시스템 연계, 장애 대응 및 신규 서비스 도입을 수행했습니다. 이전에는 LG유플러스 관련 프로젝트에서 개발 및 데이터 검증 업무를 담당했습니다.
+  결제·환불·정산 시스템 구축을 통해 월별 정산 대사 오차 0건을 유지했으며, 대량 데이터 배치 최적화로 <mark>처리 시간을 40분에서 5분으로 단축</mark>한 경험이 있습니다.
 
 content:
   - title: Experience # Title for the section
