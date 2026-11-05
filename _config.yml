@@ -62,26 +62,26 @@ content:
         sub_title: 대리 · 백엔드 개발
         caption: 2024.12 - 현재
         quote: >
-          키움증권 주식담보대출 위험관리 시스템(RMS, 계좌수 약 5천)과 자사 AI 투자정보 서비스(회원수 약 6만) 개발·운영
+          키움증권 주식담보대출 위험관리 시스템(RMS)과 자사 AI 투자정보 서비스(회원수 약 6만) 개발·운영
         description: | # this will include new lines to allow paragraphs
-          - 키움증권 RMS 메인 개발 및 단독 운영
+          - RMS<mark>메인 개발 및 운영</mark>(약 5천 계좌)
           - 여신사·증권사 원장 간 전문 송수신 및 금융 거래 연계 시스템 관리
           - 키움증권 IDC 환경에서 HA 시스템 운영 및 장애 대응
-          - AI 시그널프로 결제·환불·매출·정산 어드민 구축 및 운영
-          - **Tech Stack:** Java, C, MySQL, MongoDB, Linux, System V IPC, TCP/IP Socket, Oracle Tuxedo, Spring Boot, JPA
+          - RMS <mark>전체 서비스 중단 0건</mark> 유지
+          - AI 시그널프로 결제·환불·매출·정산 어드민 구축 및 운영, 출시 이후 월별 <mark>정산 대사 오차 0건</mark> 유지
           
       - layout: left
         title: 엠텔레텍
         link: mteletec.com
         # link_text: boringcompany.com
-        sub_title: 대리 · 통신사 시스템 백엔드 개발
+        sub_title: 대리 · 백엔드 개발
         caption: 2021.01 - 2024.11
         quote: >
-          LG유플러스 협력 SI 기업
+          LG유플러스 협력 SI 기업에서 프로젝트 수행
         description: | # this will include new lines to allow paragraphs
-          - LG유플러스 기간계 시스템 MSA 차세대 CRM 현행화, 일배치 약 40개 전면 수정
-          - 약 30만 건 처리 배치 쿼리 튜닝으로 수행 시간 40분 → 5분 단축
-          - 법인 컨설팅 회사의 영업관리 CRM 핵심 메뉴 설계·개발, 고객 조회 2~3분 → 5초 이내 개선
+          - LG유플러스 차세대 MSA 전환에 따른 기간계 CRM 현행화
+          - 약 30만 건의 데이터를 처리하는 배치 최적화로 수행 시간 <mark>40분 → 5분 단축</mark>
+          - 법인 컨설팅 회사 대상 영업관리 CRM의 주요 화면 및 백엔드 기능 설계·개발
           - 팀 내 <mark>우수사원 2회 선정</mark>(2022, 2023), 신입 사원 멘토
 
   - title: Projects # Title for the section
@@ -90,7 +90,7 @@ content:
 ###### RMS    
       - layout: top-middle
         title: 키움증권 RMS
-        sub_title: 주식담보대출 위험관리 시스템
+        sub_title: (주)이머니 · 주식담보대출 위험관리 시스템
           
       - layout: left
         title: KRX 애프터마켓 도입
@@ -126,7 +126,7 @@ content:
         title: NXT 대체거래소 도입
         sub_title: 2025.12 ~ 2026.04
         quote: >
-          신규 거래소 도입에 따른 RMS 거래 처리 체계를 확장하고, SOR 주문 처리 안정성 확보
+          신규 거래소 도입에 따른 KRX·NXT·SOR 거래 처리 체계를 확장하고, 주문 처리 안정성 개선
         description: |
           - NXT·SOR 매매, 실시간잔고 및 시세 수신 로직 개발과 공유메모리 구조 확장
           - 거래시간 확대에 따른 담보비율 재산정 및 반대매매 사전고지 배치 개선
@@ -146,7 +146,7 @@ content:
 ###### AI시그널프로
       - layout: top-middle
         title: AI 시그널프로
-        sub_title: AI 기반 주식 투자정보 서비스
+        sub_title: (주)이머니 · AI 기반 주식 투자정보 서비스
 
       - layout: left
         title: 서비스 운영 기능 어드민화
