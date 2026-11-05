@@ -86,6 +86,11 @@ content:
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
+      - layout: top-middle
+        title: 키움증권 RMS
+        description: |
+          주식담보대출 위험관리 시스템
+          
       - layout: left
         title: KRX 애프터마켓 도입
         # link: github.com/sproogen
@@ -97,7 +102,7 @@ content:
           # - title:  Github page for project (eg. sproogen/modern-resume-theme)
           #   icon: fab fa-github
           #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
-        sub_title: 키움증권 주식담보대출 위험관리 시스템(RMS) · 2026.07 ~ 2026.09
+        sub_title: 2026.07 ~ 2026.09
         quote: >
           KRX 애프터마켓 도입에 따른 실시간 현재가 기준과 반대매매 처리 위험을 분석·개선하고, 무장애 오픈 달성
         description: | # this will include new lines to allow paragraphs
@@ -108,9 +113,9 @@ content:
 
       - layout: left
         title: NXT 대체거래소 도입
-        sub_title: 키움증권 주식담보대출 위험관리 시스템(RMS) · 2025.12 ~ 2026.04
+        sub_title: 2025.12 ~ 2026.04
         quote: >
-          신규 거래소 도입에 따른 RMS 거래 처리 체계를 확장하고, SOR 주문 처리 안정성 개선
+          신규 거래소 도입에 따른 RMS 거래 처리 체계를 확장하고, SOR 주문 처리 안정성 확보
         description: |
           - NXT·SOR 매매, 실시간잔고 및 시세 수신 로직 개발과 공유메모리 구조 확장
           - 거래시간 확대에 따른 담보비율 재산정 및 반대매매 사전고지 배치 개선
@@ -120,19 +125,19 @@ content:
 
       - layout: left
         title: HA 페일오버 자동화 및 장애 대응 훈련
-        sub_title: 키움증권 주식담보대출 위험관리 시스템(RMS)
+        sub_title: 2025.07
         quote: >
-          HA 페일오버 시 공유메모리 자동 복원 체계를 구축하고, 장애 대응 훈련을 통해 시스템 복구 절차 검증
+          HA 페일오버 시 공유메모리 자동 복원 체계를 구축하여, 운영자 수동 개입을 제거하고 복구 절차 개선
         description: |
           - HA 페일오버 대응 시나리오 수립 및 Active 서버 강제 종료에 따른 Standby 전환 테스트 수행
           - 공유메모리 복원 지연으로 발생하는 페일오버 타임아웃을 비동기 실행 방식으로 해결
-          - 운영자 수동 복원 절차 제거 및 장애 복구 자동화
+          - systemd 기반 공유메모리 자동 복원 로직 구현
           - DR 훈련 시 crontab을 활용한 영향 프로세스 사전 종료 및 훈련 종료 후 재기동 대응
           - **Tech Stack:** Linux, systemd, System V IPC, crontab
               
       - layout: left
         title: RMS 어드민 공통코드 관리 개선
-        sub_title: 키움증권 주식담보대출 위험관리 시스템(RMS) · 2025.02 ~ 2025.04
+        sub_title: 2025.02 ~ 2025.04
         quote: >
           신규 업체 및 대출상품 추가 작업 기간을 약 1개월에서 약 3일로 단축
         description: |
@@ -140,31 +145,6 @@ content:
           - MongoDB 기반 공통코드 관리 구조 설계 및 어드민 조회 로직 전환
           - 여신사·수탁사 및 대출상품 정보의 관리 방식 통합
           - **Tech Stack:** Java, C, JSP, MongoDB
-
-  - title: Education # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: top-middle
-        title: 디지털 컨버전스 융합 응용SW 개발자 양성과정
-        caption: 2019.08 - 2020.02
-        sub_title: KH정보교육원
-        # quote: >
-        #   Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
-        # description: | # this will include new lines to allow paragraphs
-          # During my time at Harvard I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.
-
-          # I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
-
-      - layout: top-middle
-        title: 가천대학교
-        caption: 2014.03 - 2019.02
-        sub_title: 응급구조학
-        # quote: >
-        #   Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
-        # description: | # this will include new lines to allow paragraphs
-          # During my time at Harvard I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.
-
-          # I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
 
   - title: Skills
     layout: list
@@ -211,6 +191,32 @@ content:
         title: 컴퓨터활용능력 1급
         sub_title: 대한상공회의소
         caption: 2018.02.02
+
+  - title: Education # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: top-middle
+        title: 디지털 컨버전스 융합 응용SW 개발자 양성과정
+        caption: 2019.08 - 2020.02
+        sub_title: KH정보교육원
+        # quote: >
+        #   Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
+        # description: | # this will include new lines to allow paragraphs
+          # During my time at Harvard I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.
+
+          # I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
+
+      - layout: top-middle
+        title: 가천대학교
+        caption: 2014.03 - 2019.02
+        sub_title: 응급구조학
+        # quote: >
+        #   Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
+        # description: | # this will include new lines to allow paragraphs
+          # During my time at Harvard I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.
+
+          # I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
+
   
   - title: A Little More About Me
     layout: text
