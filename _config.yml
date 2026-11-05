@@ -121,17 +121,28 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: Harvard University
-        caption: 2010 - 2013
-        sub_title: BSc Computer Science
-        quote: >
-          Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
-        description: | # this will include new lines to allow paragraphs
+        title: 디지털 컨버전스 융합 응용SW 개발자 양성과정
+        caption: 2019.08 - 2020.02
+        sub_title: KH정보교육원
+        # quote: >
+        #   Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
+        # description: | # this will include new lines to allow paragraphs
           During my time at Harvard I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.
 
           I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
 
-  - title: Skill
+      - layout: left
+        title: 가천대학교
+        caption: 2014.03 - 2019.02
+        sub_title: 응급구조학
+        # quote: >
+        #   Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
+        # description: | # this will include new lines to allow paragraphs
+          During my time at Harvard I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.
+
+          I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
+
+  - title: Skills
     layout: list
     content:
       - layout: left
@@ -158,6 +169,24 @@ content:
           - HTML, CSS, JavaScript
           - JSP, Thymeleaf, WebSquare
           - Vue.js, Nuxt
+
+  - title: Certifications
+    layout: list
+    content:
+      - layout: left
+        title: SQLD
+        sub_title: 한국데이터베이스진흥센터
+        caption: 2022.04.08
+
+      - layout: left
+        title: 정보처리기사
+        sub_title: 한국산업인력공단
+        caption: 2019.11.22
+
+      - layout: left
+        title: 컴퓨터활용능력 1급
+        sub_title: 대한상공회의소
+        caption: 2018.02.02
   
   - title: A Little More About Me
     layout: text
