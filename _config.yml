@@ -62,7 +62,7 @@ content:
         sub_title: 대리 · 백엔드 개발
         caption: 2024.12 - 현재
         quote: >
-          키움증권 주식담보대출 위험관리 시스템(계좌수 약 5천)과 자사 AI 투자정보 서비스(회원수 약 6만) 개발·운영
+          키움증권 주식담보대출 위험관리 시스템(RMS, 계좌수 약 5천)과 자사 AI 투자정보 서비스(회원수 약 6만) 개발·운영
         description: | # this will include new lines to allow paragraphs
           - 키움증권 주식담보대출 위험관리 시스템(RMS) 메인 개발 및 단독 운영, 서비스 중단 0건
           - NXT 대체거래소 도입 및 KRX 애프터마켓 대응
@@ -99,12 +99,13 @@ content:
           #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
         sub_title: 키움증권 주식담보대출 위험관리 시스템(RMS) · 2026.07 ~ 2026.09
         quote: >
-          KRX 애프터마켓 시행에 맞춰 RMS의 매매, 담보비율 산정, 운영 반영을 단독 수행해 무장애 오픈
+          KRX 애프터마켓 도입에 따른 실시간 현재가 기준과 반대매매 처리 위험을 분석·개선하고, 무장애 오픈 달성
         description: | # this will include new lines to allow paragraphs
-          - 담보비율과 매수가능금액의 가격 기준 분리 설계
-          - 여신사 강제해지 전문 발송 시각에 따른 반대매매 리스크 사전 발견 및 대응 방안 제안
-          - 운영반영 시나리오 및 원복계획서 작성, 이행리허설 대응
-          - 사용 기술: C, Linux, System V IPC, Oracle Tuxedo
+          - 담보비율과 매수가능금액 산정에 적용되는 가격 기준 분리
+          - 여신사 강제해지 전문 발송 시각에 따른 즉시 체결 위험 사전 식별 및 대응
+          - 운영 반영·원복 시나리오 수립 및 이행 리허설 수행
+
+          **Tech Stack**: C, Linux, System V IPC, Oracle Tuxedo
 
       - layout: top-middle
         title: 이벤트시트관리 메뉴 개발
@@ -120,7 +121,7 @@ content:
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
     content:
-      - layout: left
+      - layout: top-middle
         title: 디지털 컨버전스 융합 응용SW 개발자 양성과정
         caption: 2019.08 - 2020.02
         sub_title: KH정보교육원
@@ -131,7 +132,7 @@ content:
 
           # I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
 
-      - layout: left
+      - layout: top-middle
         title: 가천대학교
         caption: 2014.03 - 2019.02
         sub_title: 응급구조학
@@ -173,17 +174,17 @@ content:
   - title: Certifications
     layout: list
     content:
-      - layout: left
+      - layout: top-middle
         title: SQLD
         sub_title: 한국데이터베이스진흥센터
         caption: 2022.04.08
 
-      - layout: left
+      - layout: top-middle
         title: 정보처리기사
         sub_title: 한국산업인력공단
         caption: 2019.11.22
 
-      - layout: left
+      - layout: top-middle
         title: 컴퓨터활용능력 1급
         sub_title: 대한상공회의소
         caption: 2018.02.02
