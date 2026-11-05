@@ -109,7 +109,19 @@ content:
           - 여신사 강제해지 전문 발송 시각에 따른 즉시 체결 위험 사전 식별 및 대응
           - 운영 반영·원복 시나리오 수립 및 이행 리허설 수행
           - **Tech Stack:** Java, C, Linux, MongoDB, System V IPC, Oracle Tuxedo
-
+          
+      - layout: left
+        title: HA 페일오버 자동화 및 장애 대응 훈련
+        sub_title: 2026.06
+        quote: >
+          HA 페일오버 시 공유메모리 자동 복원 체계를 구축하여, 운영자 수동 개입을 제거하고 복구 절차 개선
+        description: |
+          - HA 페일오버 대응 시나리오 수립 및 Active 서버 강제 종료에 따른 Standby 전환 테스트 수행
+          - 공유메모리 복원 지연으로 발생하는 페일오버 타임아웃을 비동기 실행 방식으로 해결
+          - systemd 기반 공유메모리 자동 복원 로직 구현
+          - DR 훈련 시 crontab을 활용한 영향 프로세스 사전 종료 및 훈련 종료 후 재기동 대응
+          - **Tech Stack:** Linux, systemd, System V IPC, crontab
+          
       - layout: left
         title: NXT 대체거래소 도입
         sub_title: 2025.12 ~ 2026.04
@@ -121,18 +133,6 @@ content:
           - SOR 정정·취소 오류의 원인 분석 및 주문 추적 로직 개선
           - 대출상품별 NXT·SOR 지원 여부에 따른 주문 처리 분기 적용
           - **Tech Stack:** Java, C, Linux, MongoDB, System V IPC, Oracle Tuxedo
-
-      - layout: left
-        title: HA 페일오버 자동화 및 장애 대응 훈련
-        sub_title: 2025.07
-        quote: >
-          HA 페일오버 시 공유메모리 자동 복원 체계를 구축하여, 운영자 수동 개입을 제거하고 복구 절차 개선
-        description: |
-          - HA 페일오버 대응 시나리오 수립 및 Active 서버 강제 종료에 따른 Standby 전환 테스트 수행
-          - 공유메모리 복원 지연으로 발생하는 페일오버 타임아웃을 비동기 실행 방식으로 해결
-          - systemd 기반 공유메모리 자동 복원 로직 구현
-          - DR 훈련 시 crontab을 활용한 영향 프로세스 사전 종료 및 훈련 종료 후 재기동 대응
-          - **Tech Stack:** Linux, systemd, System V IPC, crontab
               
       - layout: left
         title: RMS 어드민 공통코드 관리 개선
@@ -144,7 +144,38 @@ content:
           - MongoDB 기반 공통코드 관리 구조 설계 및 어드민 조회 로직 전환
           - 여신사·수탁사 및 대출상품 정보의 관리 방식 통합
           - **Tech Stack:** Java, C, JSP, MongoDB
+          
+  - title: Troubleshooting # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: 실시간 데이터 수신 장애
+        sub_title: RMS
+        quote: >
+          실시간 데이터 수신 프로세스가 반복적으로 종료·재기동되며 정상 수신이 불가능한 장애 발생
+        description: | # this will include new lines to allow paragraphs
+          **Cause**
+          - 계좌번호 처리 과정의 버퍼 오버플로우로 프로세스 비정상 종료
+          - 자동 재기동 시 마지막 처리 시퀀스부터 동일 데이터를 재수신하며 장애 반복
 
+          **Solution**
+          - 장애 데이터의 영향 범위를 확인한 후 문제 시퀀스를 건너뛰어 긴급 복구
+          - 계좌번호 처리 로직 수정으로 반복 종료의 근본 원인 제거
+          
+      - layout: left
+        title: 신주인수권 출고 잔고 오류
+        sub_title: RMS
+        quote: >
+          신주인수권 출고 후 마이너스 잔고가 발생하고, 계좌 조회 프로세스가 비정상 종료되는 장애 발생
+        description: |
+          **Cause**
+          - 잔고 동기화 배치는 유가증권만 저장하지만 실시간 출고 처리에서는 비유가증권도 차감
+          - 배치·실시간 처리 기준 불일치로 존재하지 않는 잔고에서 수량이 차감되어 마이너스 잔고 발생
+
+          **Solution**
+          - 비유가증권 출고 시 로그만 기록하고 DB 처리를 생략하도록 로직 수정
+          - 기존 마이너스 잔고 데이터 정리 및 배치·실시간 처리 기준 일치
+          
   - title: Skills
     layout: list
     content:
