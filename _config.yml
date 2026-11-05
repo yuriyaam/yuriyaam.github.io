@@ -64,10 +64,11 @@ content:
         quote: >
           키움증권 주식담보대출 위험관리 시스템(RMS, 계좌수 약 5천)과 자사 AI 투자정보 서비스(회원수 약 6만) 개발·운영
         description: | # this will include new lines to allow paragraphs
-          - 키움증권 주식담보대출 위험관리 시스템(RMS) 메인 개발 및 단독 운영, 서비스 중단 0건
-          - NXT 대체거래소 도입 및 KRX 애프터마켓 대응
-          - 키움증권 IDC 환경에서 HA 시스템 운영 및 페일오버 대응
-          - AI 시그널프로 결제·환불·매출·정산 어드민 구축, 정산 오차 0건
+          - 키움증권 RMS 메인 개발 및 단독 운영
+          - 여신사·증권사 원장 간 전문 송수신 및 금융 거래 연계 시스템 관리
+          - 키움증권 IDC 환경에서 HA 시스템 운영 및 장애 대응
+          - AI 시그널프로 결제·환불·매출·정산 어드민 구축 및 운영
+          - **Tech Stack:** Java, C, Linux, MySQL, MongoDB, TCP/IP Socket, Oracle Tuxedo, Spring Boot, JPA
           
       - layout: left
         title: 엠텔레텍
@@ -145,10 +146,6 @@ content:
           - 여신사·수탁사 및 대출상품 정보의 관리 방식 통합
           - **Tech Stack:** Java, C, JSP, MongoDB
           
-  - title: Troubleshooting # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      
   - title: Troubleshooting
     layout: list
     content:
