@@ -88,8 +88,7 @@ content:
     content:
       - layout: top-middle
         title: 키움증권 RMS
-        description: |
-          주식담보대출 위험관리 시스템
+        sub_title: 주식담보대출 위험관리 시스템
           
       - layout: left
         title: KRX 애프터마켓 도입
