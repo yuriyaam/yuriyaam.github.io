@@ -87,7 +87,7 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: KRX 애프터마켓 도입 대응
+        title: KRX 애프터마켓 도입
         # link: github.com/sproogen
         # link_text: Project Website
         # additional_links:
@@ -118,7 +118,29 @@ content:
           - 대출상품별 NXT·SOR 지원 여부에 따른 주문 처리 분기 적용
           - **Tech Stack:** Java, C, Linux, MongoDB, System V IPC, Oracle Tuxedo
 
-          
+      - layout: left
+        title: HA 페일오버 자동화 및 장애 대응 훈련
+        sub_title: 키움증권 주식담보대출 위험관리 시스템(RMS)
+        quote: >
+          HA 페일오버 시 공유메모리 자동 복원 체계를 구축하고, 장애 대응 훈련을 통해 시스템 복구 절차 검증
+        description: |
+          - HA 페일오버 대응 시나리오 수립 및 Active 서버 강제 종료에 따른 Standby 전환 테스트 수행
+          - 공유메모리 복원 지연으로 발생하는 페일오버 타임아웃을 비동기 실행 방식으로 해결
+          - 운영자 수동 복원 절차 제거 및 장애 복구 자동화
+          - DR 훈련 시 crontab을 활용한 영향 프로세스 사전 종료 및 훈련 종료 후 재기동 대응
+          - **Tech Stack:** Linux, systemd, System V IPC, crontab
+              
+      - layout: left
+        title: RMS 어드민 공통코드 관리 개선
+        sub_title: 키움증권 주식담보대출 위험관리 시스템(RMS) · 2025.02 ~ 2025.04
+        quote: >
+          신규 업체 및 대출상품 추가 작업 기간을 약 1개월에서 약 3일로 단축
+        description: |
+          - 여러 화면에 분산된 하드코딩 구조의 문제점 분석 및 개선 방안 자체 제안
+          - MongoDB 기반 공통코드 관리 구조 설계 및 어드민 조회 로직 전환
+          - 여신사·수탁사 및 대출상품 정보의 관리 방식 통합
+          - **Tech Stack:** Java, C, JSP, MongoDB
+
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
     content:
