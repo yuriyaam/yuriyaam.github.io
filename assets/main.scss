@@ -1,4 +1,3 @@
-
 ---
 # Front matter comment to ensure Jekyll properly reads file.
 ---
@@ -12,6 +11,7 @@
     margin: 12mm;
   }
 
+  // 왼쪽(제목) / 오른쪽(내용) 2단 레이아웃 유지
   .layout-left {
     display: flex !important;
     flex-direction: row !important;
@@ -31,14 +31,42 @@
     box-sizing: border-box;
   }
 
-  .layout {
-    break-inside: avoid;
-    page-break-inside: avoid;
+  // flex 안의 clearfix 가상요소 제거
+  .row.layout::before,
+  .row.layout::after {
+    display: none;
   }
 
+  // 한글 줄바꿈
   .layout .content,
   .layout .details {
     word-break: keep-all;
     overflow-wrap: break-word;
+  }
+
+  // 양쪽 정렬 해제 (단어 간격 벌어짐 방지)
+  p, ul {
+    text-align: left;
+  }
+
+  // 왼쪽 제목 크기 축소
+  .layout-left .details h4 {
+    font-size: 1.9rem;
+  }
+
+  // mark 강조 복원 (Bootstrap 인쇄 규칙 덮어쓰기)
+  mark {
+    background-color: #333 !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  // 블록 전체가 아니라 작은 단위만 쪼개지지 않게
+  .layout li,
+  .layout p.quote,
+  .layout .details {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }
