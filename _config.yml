@@ -1,6 +1,6 @@
 # Site
-repository: yuriyaam/yuriyaam.github.io
-favicon: images/favicon.ico
+# repository: yuriyaam/yuriyaam.github.io
+# favicon: images/favicon.ico
 
 # Content configuration version
 version: 2
@@ -46,7 +46,7 @@ additional_links:
 
 # About Section
 # about_title: About Me
-about_profile_image: images/profile.jpg
+about_profile_image: images/yuri.jpg
 about_content: | # this will include new lines to allow paragraphs
   Java와 C 기반의 6년 차 백엔드 개발자로, 금융·통신 분야의 시스템 개발 및 운영 경험을 보유하고 있습니다.
 
