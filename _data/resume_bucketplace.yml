@@ -1,1 +1,211 @@
+# About Section
+# about_title: About Me
+about_profile_image: images/yuri.jpg
+about_content: | # this will include new lines to allow paragraphs
+  Java와 C 기반의 6년 차 백엔드 개발자로, 금융·통신 분야의 시스템 개발 및 운영 경험을 보유하고 있습니다.
 
+  약 5천 계좌 규모의 주식담보대출 위험관리 시스템(RMS) <mark>메인 개발자</mark>로서 실시간 거래 처리와 금융기관 연계 시스템을 담당했습니다.
+
+  키움증권, 다우기술, 증권사 원장 담당자, 약 16개 여신사 및 수탁사 등 <mark>다양한 대외 기관과 협업</mark>하며 시스템 연계, 장애 대응 및 신규 서비스 도입을 수행했습니다. 이전에는 LG유플러스 관련 프로젝트에서 기간계 시스템 개발과 데이터 정합성 검증을 수행했습니다.
+
+  개발 전 영향 범위와 예외 상황을 검토하고, 테스트 및 원복 시나리오를 준비하여 운영 환경에서 발생할 수 있는 위험을 최소화하고자 노력합니다. 데이터의 <mark>정확성과 시스템 안정성</mark>을 중요하게 생각하며, 문제 발생 시 로그와 데이터 흐름을 분석해 근본 원인을 파악하고 처리 구조를 개선해 왔습니다.
+
+content:
+  - title: Experience # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        title: 이머니
+        link: emoney.co.kr
+        # link_text: boringcompany.com
+        sub_title: 대리 · 백엔드 개발
+        caption: 2024.12 - 현재
+        quote: >
+          키움증권 주식담보대출 위험관리 시스템(RMS)과 자사 AI 투자정보 서비스(회원수 약 6만) 개발·운영
+        description: | # this will include new lines to allow paragraphs
+          - RMS 메인 개발 및 운영(약 5천 계좌), <mark>전체 서비스 중단 0건</mark> 유지
+          - 여신사·증권사 원장 간 전문 송수신 및 금융 거래 연계 시스템 관리
+          - 키움증권 IDC 환경에서 HA 시스템 운영 및 장애 대응
+          - AI 시그널프로 결제·환불·매출·정산 어드민 구축 및 운영, 출시 이후 월별 <mark>정산 대사 오차 0건</mark> 유지
+          
+      - layout: left
+        title: 엠텔레텍
+        link: mteletec.com
+        # link_text: boringcompany.com
+        sub_title: 대리 · 백엔드 개발
+        caption: 2021.01 - 2024.11
+        quote: >
+          LG유플러스 협력 SI 기업에서 프로젝트 수행
+        description: | # this will include new lines to allow paragraphs
+          - LG유플러스 차세대 MSA 전환에 따른 기간계 CRM 현행화
+          - 약 30만 건의 데이터를 처리하는 배치 최적화로 수행 시간 <mark>40분 → 5분 단축</mark>
+          - 법인 컨설팅 회사 대상 영업관리 CRM의 주요 화면 및 백엔드 기능 설계·개발
+          - 팀 내 <mark>우수사원 2회 선정</mark>(2022, 2023), 신입 사원 멘토
+
+  - title: Projects # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+###### RMS    
+      - layout: top-middle
+        title: 키움증권 RMS
+        sub_title: (주)이머니 · 주식담보대출 위험관리 시스템
+          
+      - layout: left
+        title: KRX 애프터마켓 도입
+        # link: github.com/sproogen
+        # link_text: Project Website
+        # additional_links:
+        #   - title:  sproogen/modern-resume-theme
+        #     icon: fab fa-github
+        #     url: github.com/sproogen/modern-resume-theme
+          # - title:  Github page for project (eg. sproogen/modern-resume-theme)
+          #   icon: fab fa-github
+          #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
+        sub_title: 2026.06 ~ 2026.09
+        quote: >
+          KRX 애프터마켓 도입에 따른 시세 처리구조 개선 및 반대매매 위험 사전 대응으로 무장애 오픈
+        description: | # this will include new lines to allow paragraphs
+          - 애프터마켓 도입에 따른 시세 구조 및 가격 적용 기준 변경
+          - 여신사의 강제해지 전문 발송에 따른 반대매매 즉시 체결 위험을 사전 식별하고, 발송 시각 조정
+          - 운영 반영·원복 시나리오 수립 및 이행 리허설 수행
+          - **Tech Stack:** Java, C, MongoDB, Linux, System V IPC, Oracle Tuxedo
+          
+      - layout: left
+        title: HA 페일오버 자동화 및 장애 대응
+        sub_title: 2026.05
+        quote: >
+          HA 페일오버 시 발생하는 타임아웃 문제를 해결하고 공유메모리 자동 복원 구현
+        description: |
+          - 공유메모리 복원 지연으로 발생하는 페일오버 타임아웃을 systemd 기반 비동기 실행 방식으로 해결
+          - HA 페일오버 장애 대응 시나리오 수립 및 전환 테스트를 통한 복구 절차 검증
+          - **Tech Stack:** Linux, systemd, System V IPC, crontab
+          
+      - layout: left
+        title: NXT 대체거래소 도입
+        sub_title: 2025.12 ~ 2026.04
+        quote: >
+          신규 거래소 도입에 따른 KRX·NXT·SOR 거래 처리 체계를 확장하고, 주문 처리 안정성 개선
+        description: |
+          - NXT·SOR 거래 및 잔고의 실시간 데이터 처리 로직 개발
+          - NXT 시세 수신에 따른 공유메모리 구조 확장
+          - SOR 주문번호 특성을 고려한 정정·취소 처리 로직 개선
+          - 거래시간 확대에 따른 담보비율 재산정 및 반대매매 사전고지 배치 개선
+          - 대출상품별 NXT·SOR 지원 여부에 따른 주문 처리 분기 적용
+          - **Tech Stack:** Java, C, MongoDB, Linux, System V IPC, Oracle Tuxedo
+              
+      - layout: left
+        title: RMS 어드민 공통코드 관리 개선
+        sub_title: 2025.02 ~ 2025.04
+        quote: >
+          신규 업체 및 대출상품 추가 작업 기간을 약 1개월에서 약 3일로 단축
+        description: |
+          - 업체·상품 정보의 하드코딩으로 발생하는 유지보수 비효율을 분석하고 공통코드화 제안
+          - MongoDB 기반 공통코드 관리 구조 설계 및 어드민 조회 로직 변경
+          - **Tech Stack:** Java, JSP, C, MongoDB, Linux
+
+###### AI시그널프로
+      - layout: top-middle
+        title: AI 시그널프로
+        sub_title: (주)이머니 · AI 기반 주식 투자정보 서비스
+
+      - layout: left
+        title: 서비스 운영 기능 어드민화
+        sub_title: 2025.09 ~ 2026.06
+        quote: >
+          서비스 개발·배포가 필요했던 운영 업무를 어드민으로 전환하여 업무 자동화 및 개발 의존도 감소
+        description: |
+          - FCM 기반 즉시·예약·대상별 발송 기능 및 일일 푸시 배치 개발
+          - 코스콤 휴장일 엑셀 업로드 기능 개발 및 등록된 휴장일 기준 배치 실행 제어
+          - 이벤트시트 등록·관리 기능 및 Azure Blob Storage 기반 이미지 업로드 구현
+          - **Tech Stack:** Java, Spring Boot, MyBatis, MySQL, Thymeleaf
+
+      - layout: left
+        title: 상품 조회 구조 개선 및 확장
+        sub_title: 2025.08 ~ 2026.02
+        quote: >
+          하드코딩된 상품 조회 구조를 DB 기반 공통 모듈로 전환하여 신규 상품 확장성 확보
+        description: |
+          - 신규 상품 출시에 따른 멤버십 안내 페이지 DB화 및 하드코딩 제거
+          - 상품군·상품 유형별 공통 조회 모듈 개발 및 기존 PG 결제 연동 로직 개선
+          - **Tech Stack:** Java, Spring Boot, JPA, MySQL, Vue.js
+
+      - layout: left
+        title: 결제·환불·정산 어드민 구축
+        sub_title: 2025.05 ~ 2025.08
+        quote: >
+          결제·환불·매출·정산 관리 기능을 신규 구축하고 출시 이후 월별 정산 대사 오차 0건 유지
+        description: |
+          - 결제 유형 관리 구조 개선 및 환불 처리 단계별 관리 기능 개발
+          - 구독형·쿠폰 상품의 결제·환불·상품 변경을 반영한 매출·정산 집계 및 조회 기능 개발
+          - 이용 기간별 일할 안분, VAT 및 단수 처리 로직을 적용한 일일 정산 배치 개발
+          - **Tech Stack:** Java, Spring Boot, MyBatis, MySQL, Thymeleaf
+
+      - layout: top-middle
+        title: 리치디바인 CRM
+        sub_title: (주)엠텔레텍 · 기업 영업관리 시스템
+
+      - layout: left
+        title: CRM 웹사이트 신규 구축
+        sub_title: 2024.05 ~ 2024.11
+        quote: >
+          기업 영업관리 CRM 신규 구축 프로젝트에서 영업 프로세스 관리 기능 설계·개발
+        description: |
+          - 영업 단계별 진행·취소·보류 이력 관리를 위한 DB 및 화면 구조 설계
+          - 영업 진행 타임라인 메뉴 개발 및 사용자 권한별 기능 제어
+          - 쿼리 실행 계획 분석 및 인덱스 추가로 고객 조회 성능 개선
+          - **Tech Stack:** Java, Spring Boot, MyBatis, MySQL, Thymeleaf
+
+      - layout: top-middle
+        title: LG유플러스 유큐브 CRM
+        sub_title: (주)엠텔레텍 · 통신사 기간계 시스템
+      
+      - layout: left
+        title: MSA 차세대 전환에 따른 CRM 현행화
+        sub_title: 2021.07 ~ 2023.10
+        quote: >
+          MSA 차세대 전환에 따른 CRM 배치 현행화 및 쿼리 최적화로 배치 수행 시간 40분 → 5분 단축
+        description: |
+          - MSA 전환에 따른 고객·상품 데이터 구조 변경에 대응하여 CRM 일배치 약 40개 전면 수정
+          - 약 30만 건의 배치 데이터 처리 및 ETL·Kafka 데이터 정합성 검증
+          - 쿼리 실행 계획 분석 및 조인 구조·인덱스 최적화를 통한 대량 데이터 처리 성능 개선
+          - 채널 거부 관리의 현재 상태·이력 테이블 분리 설계 및 화면 재개발
+          - **Tech Stack:** Java, wafful, WebSquare, MySQL, Quartz
+          
+  - title: Troubleshooting
+    layout: list
+    content:
+    - layout: left
+      title: SOR 정정 시 매수미체결금액 오류
+      sub_title: RMS · 2026.07
+      quote: >
+        SOR 정정 과정에서 발생한 매수미체결금액 음수 누적 오류를 해결하여 <mark>금융 거래 데이터 정합성 개선</mark>
+      description: |
+        - **원인:** 거래소 변경 SOR 정정으로 파생된 신규 매수주문의 미체결금액 설정 누락
+        - **해결:** 실시간 주문 데이터의 SOR 처리 구분값을 활용하여 파생 신규주문 식별 및 미체결금액 설정 로직 보완
+
+    - layout: left
+      title: 푸시 대량 발송 시 DB 커넥션 풀 고갈
+      sub_title: AI 시그널프로 · 2026.03
+      quote: >
+        대량 푸시 발송 시 발생한 DB 커넥션 풀 고갈과 스레드 누적 문제를 해결하여 <mark>발송 처리 안정성 개선</mark>
+      description: |
+        - **원인:** 동시 실행 스레드 100개로 인한 DB 커넥션 풀 고갈 및 ExecutorService 미종료에 따른 스레드 누적
+        - **해결:** 스레드 수 100개 → 5개 조정 및 finally 블록에서 스레드 풀 종료 보장
+
+    - layout: left
+      title: 실시간 데이터 수신 장애
+      sub_title: RMS
+      quote: >
+        실시간 데이터 수신 프로세스의 반복 종료 원인을 제거하여 <mark>정상 수신 복구</mark>
+      description: |
+        - **원인:** 계좌번호 처리 과정의 버퍼 오버플로우 및 자동 재기동 후 동일 데이터 재수신으로 장애 반복
+        - **해결:** 장애 데이터의 영향 범위 확인 후 긴급 복구 및 계좌번호 처리 로직 수정
+        
+    - layout: left
+      title: 신주인수권 출고 잔고 오류
+      sub_title: RMS
+      quote: >
+        신주인수권 출고 시 발생하는 마이너스 잔고 오류를 해결하여 <mark>잔고 데이터 정합성 개선</mark>
+      description: |
+        - **원인:** 잔고 동기화 배치와 실시간 출고 처리 간 비유가증권 처리 기준 불일치
+        - **해결:** 비유가증권 출고 시 DB 반영 제외 및 기존 마이너스 잔고 데이터 정리
