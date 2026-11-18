@@ -1,5 +1,7 @@
+# 오늘의집 제출용 경력기술서
+
 ---
-layout: resume_variant
+layout: bucketplace
 title: 배유리 경력기술서
 role: 백엔드 개발자
 permalink: /bucketplace/
