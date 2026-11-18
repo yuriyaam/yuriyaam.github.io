@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="ko">
 {%- include head.html -%}
-<body>
-  <!-- 공통 데이터 영역 -->
-  <header>
-    <h1>{{ site.data.resume_common.name }}</h1>
-    <p>{{ page.role }}</p> <!-- 버전별로 다르게 출력 -->
-    <p>Email: {{ site.data.resume_common.email }} | GitHub: {{ site.data.resume_common.github }}</p>
-  </header>
 
-  <!-- 버전별 핵심 요약 -->
-  <section>
-    <h2>핵심 역량</h2>
-    <ul>
-      {% for item in page.highlights %}
-        <li>{{ item }}</li>
+{% assign resume = site.data.resume_bucketplace %}
+{% assign section_titles = resume.content | map: 'title' %}
+{% assign about_title = resume.about_title | default: 'About Me' %}
+
+<body class="{% if site.darkmode == true %}dark{% endif %}">
+  {%- include header.html -%}
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="container intro-container">
+        <h3 id="{{ about_title | slugify }}">{{ about_title | escape }}</h3>
+
+        <div class="row clearfix">
+          {% if resume.about_profile_image %}
+            <div class="col-xs-12 col-sm-4 col-md-3 no-print">
+              <span class="profile-img"
+                    style="background-image: url('{{ resume.about_profile_image | relative_url }}')"></span>
+            </div>
+          {% endif %}
+
+          <div class="col-xs-12{% if resume.about_profile_image %} col-sm-8 col-md-9 col-print-12{% endif %}">
+            {{ resume.about_content | strip | markdownify }}
+          </div>
+        </div>
+      </div>
+
+      {% for section in resume.content %}
+        <div class="container {{ section.layout }}-container">
+          <h3 id="{{ section.title | slugify }}">{{ section.title | escape }}</h3>
+          {% assign section_template = section.layout | prepend: 'section-' | append: '.html' %}
+          {% include {{ section_template }} content=section.content %}
+        </div>
       {% endfor %}
-    </ul>
-  </section>
 
-  <!-- 버전별 본문 (마크다운 내용이 들어가는 곳) -->
-  <main>
-    {{ content }}
+      {% for section in site.content %}
+        {% unless section_titles contains section.title %}
+          <div class="container {{ section.layout }}-container">
+            <h3 id="{{ section.title | slugify }}">{{ section.title | escape }}</h3>
+            {% assign section_template = section.layout | prepend: 'section-' | append: '.html' %}
+            {% include {{ section_template }} content=section.content %}
+          </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
   </main>
 
-  <!-- 공통 학력 영역 -->
-  <footer>
-    <h2>학력</h2>
-    {% for edu in site.data.resume_common.education %}
-      <p>{{ edu.school }} {{ edu.major }} ({{ edu.period }})</p>
-    {% endfor %}
-  </footer>
+  {%- include footer.html -%}
+
+  {% if site.darkmode == false %}
+    <script src="{{ '/assets/js/index.js' | relative_url }}"></script>
+  {% endif %}
 </body>
 </html>
